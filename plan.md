@@ -51,7 +51,7 @@ Multi-turn RL for SQL agents already has solid prior work. This project does not
 
 ## 3. Tech stack and compute
 
-Main model Qwen3-1.7B, Qwen3-0.6B for debugging. SFT with TRL + PEFT, RL with verl. CPU work on the Mac; SFT, evaluation and GRPO on a rented RunPod A40 (the DSMLP 24GB option was deactivated on 10/24). Total budget about 60–80 GPU-hours, roughly $40–50.
+Main model Qwen3-1.7B, Qwen3-0.6B for debugging. SFT with TRL + PEFT, RL with verl. CPU work on the Mac; SFT, evaluation and GRPO on a rented RunPod A40. Total budget about 60–80 GPU-hours, roughly $40–50.
 
 | Component | Choice | Rationale |
 | --- | --- | --- |
@@ -70,7 +70,6 @@ Main model Qwen3-1.7B, Qwen3-0.6B for debugging. SFT with TRL + PEFT, RL with ve
 | Resource | Spec | Use | Status |
 | --- | --- | --- | --- |
 | Mac (local) | M2, 8GB RAM | Parser, evaluation, data statistics, environment unit tests | Ready |
-| DSMLP CSE251B `sp26-cuda128` | 20–24GB, CUDA 12.8 | — | Deactivated (confirmed 10/24) |
 | DSMLP Independent Study | GTX 1080 Ti 11GB | No vLLM or bf16 support; backup only | Available |
 | RunPod A40 | 48GB, Secure Cloud $0.59/hr | Single-turn SFT, cold-start SFT, evaluation, GRPO (training, reference model and vLLM share one GPU during GRPO) | Rent on demand; confirm price before creating |
 
@@ -159,7 +158,7 @@ Target completion: **2026-11-24**, nine days later than the original plan, in ex
 
 - [x] Local conda env; download BIRD dev, BIRD train metadata, Spider, SNAILS
 - [x] Qwen3-0.6B zero-shot smoke test
-- [ ] Sign up for RunPod and add credit (~$10 to start); the DSMLP CSE251B option was deactivated on 10/24
+- [ ] Sign up for RunPod and add credit (~$10 to start)
 - [ ] Download BIRD train databases and SNAILS sqlite databases on the GPU machine
 - [ ] First commit (made by the user)
 
