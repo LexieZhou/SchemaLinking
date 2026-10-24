@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlagent"
+version = "0.1.0"
+description = "Multi-turn SQL data agent: schema exploration via tools, trained with LoRA SFT and multi-turn GRPO"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "data: needs the raw datasets under data/raw/ (skipped if missing)",
+]
