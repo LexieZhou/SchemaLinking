@@ -1,15 +1,20 @@
-# Raw data: large, and reproducible via scripts/download_data.sh
+# Data: large, and reproducible via scripts/
 data/raw/
+data/processed/
 
-# Training artifacts
+# Training and eval artifacts
 outputs/
 checkpoints/
 wandb/
 *.safetensors
 
+# Secrets (API keys for the frontier baseline, W&B, RunPod)
+.env
+
 # Python
 __pycache__/
 *.pyc
+*.egg-info/
 .pytest_cache/
 .ipynb_checkpoints/
 
