@@ -1,0 +1,8 @@
+# Extra installs on DSMLP (CUDA): training and batched inference
+# Install verl separately in phase 4; it pins torch / vllm versions strictly
+-r requirements.txt
+trl
+peft
+bitsandbytes
+vllm
+wandb

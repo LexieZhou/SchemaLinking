@@ -1,0 +1,11 @@
+# Runs locally (Mac / CPU): data pipeline, eval, small-model debug inference
+torch
+transformers
+accelerate
+sqlglot
+pandas
+openpyxl
+pytest
+tqdm
+remotezip
+gdown
